@@ -1,6 +1,6 @@
 {
   "name": "relateify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Passthrough transform, handling @related-file annotations",
   "main": "index.js",
   "scripts": {
