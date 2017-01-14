@@ -1,0 +1,65 @@
+{
+  "name": "relateify",
+  "version": "0.0.0",
+  "description": "Passthrough transform, handling @related-file annotations",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . && flow check && BABEL_ENV=coverage nyc mocha",
+    "build": "babel src --copy-files --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wbyoung/relateify"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "coverage/**",
+      "dist/**"
+    ],
+    "reporter": [
+      "lcov",
+      "html",
+      "text"
+    ],
+    "all": true,
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "sourceMap": false,
+    "instrument": false,
+    "temp-directory (pending-accepted-pr)": "coverage/nyc"
+  },
+  "author": "Whitney Young",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wbyoung/relateify/issues"
+  },
+  "keywords": [
+    "browserify",
+    "browserify-transform"
+  ],
+  "homepage": "https://github.com/wbyoung/relateify",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-istanbul": "^3.1.2",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.13.1",
+    "eslint-plugin-flowtype": "^2.29.2",
+    "flow-bin": "^0.37.4",
+    "mocha": "^3.2.0",
+    "nyc": "^10.0.0"
+  },
+  "dependencies": {
+    "through2": "^2.0.3"
+  }
+}
