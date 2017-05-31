@@ -52,7 +52,7 @@
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-preset-env": "^1.1.8",
     "babel-register": "^6.18.0",
-    "chai": "^3.5.0",
+    "chai": "^4.0.1",
     "eslint": "^3.13.1",
     "eslint-plugin-flowtype": "^2.29.2",
     "flow-bin": "^0.47.0",
