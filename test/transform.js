@@ -11,7 +11,7 @@ import through from 'through2';
 
 describe('relateify', () => {
 
-  const transform = async (base: string, input: string) => {
+  const transform = async(base: string, input: string) => {
     const src = through();
     const dst = relateify(base);
     let file;
@@ -33,7 +33,7 @@ describe('relateify', () => {
     return { result, file };
   };
 
-  it('emits file events for line comments', async () => {
+  it('emits file events for line comments', async() => {
     const { file } = await transform(
       '/path/to/file.js',
       '// @related-file ./rel.txt'
@@ -42,7 +42,7 @@ describe('relateify', () => {
     expect(file).to.eql('/path/to/rel.txt');
   });
 
-  it('emits file events for block comments', async () => {
+  it('emits file events for block comments', async() => {
     const { file } = await transform(
       '/path/to/file.js',
       '/* @related-file ./rel.txt */'
@@ -51,7 +51,7 @@ describe('relateify', () => {
     expect(file).to.eql('/path/to/rel.txt');
   });
 
-  it('does not resolve absolute paths', async () => {
+  it('does not resolve absolute paths', async() => {
     const { file } = await transform(
       '/path/to/file.js',
       '// @related-file /rel.txt'
@@ -60,7 +60,7 @@ describe('relateify', () => {
     expect(file).to.eql('/rel.txt');
   });
 
-  it('does not resolve non-relative paths', async () => {
+  it('does not resolve non-relative paths', async() => {
     const { file } = await transform(
       '/path/to/file.js',
       '// @related-file rel.txt'
