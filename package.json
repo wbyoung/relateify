@@ -55,7 +55,7 @@
     "chai": "^4.0.1",
     "eslint": "^4.1.0",
     "eslint-plugin-flowtype": "^2.29.2",
-    "flow-bin": "^0.54.0",
+    "flow-bin": "^0.57.2",
     "mocha": "^4.0.0",
     "nyc": "^11.0.0"
   },
